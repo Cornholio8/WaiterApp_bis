@@ -30,7 +30,7 @@ export const updateTableData = (newData) => {
                },
                body: JSON.stringify(newData),
           };
-          fetch(API_URL + '/tables' + newData.id, options)
+          fetch(API_URL + '/tables/' + newData.id, options)
                .then (()=> dispatch(updateTable(newData)))
      }
 }
